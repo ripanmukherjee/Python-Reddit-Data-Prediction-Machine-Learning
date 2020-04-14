@@ -7,6 +7,11 @@ Since the downloaded JSON file is too big that is why we need to extract certain
 zstd -d <filename>
 ```
 
+Note : If we want to compress it back then do as follow :
+```
+zstd <filename> -o <filename>.zst
+```
+
 2. Then run the python scripts : file_extraction.py : This python program as user to give input of the JSON uncompressed file and number of data the user want to extract. This python program can acept max 10 number of files. Later after extraction this python program can concatinate all the dataset into CSV file.
 
 ```$ ./file_extraction.py```
