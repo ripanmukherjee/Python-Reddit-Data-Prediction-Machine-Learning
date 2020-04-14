@@ -20,10 +20,11 @@ while counter < 10:
     counter += 1
     if attempt == 0:
         print()
+        print("Note : You can extract Max of 10 file")
         infile = input("Please enter the JSON file name : ")
         data_count = int(input("Please enter the number of data you want to extract : "))
         print()
-        print(infile, data_count, counter, attempt)
+        print("Input file : "+infile+" Data Count : "+str(data_count)+" Counter : "+str(counter))
         attempt += 1
         main_dataframe = extraction(infile, data_count)
         print()
@@ -36,7 +37,7 @@ while counter < 10:
             infile = input("Please enter the JSON file name : ")
             data_count = int(input("Please enter the number of data you want to extract : "))
             print()
-            print(infile, data_count, counter, attempt)
+            print("Input file : "+infile+" Data Count : "+str(data_count)+" Counter : "+str(counter))
             attempt += 1
             next_dataframe = extraction(infile, data_count)
             print("Your DataFrame Shape : ", next_dataframe.shape)
@@ -51,12 +52,12 @@ while counter < 10:
                 csv_outfile = input("Please Enter CSV file name : ")
                 main_dataframe.to_csv(csv_outfile)
                 print()
-                print("Done !! Thank You!!")
+                print("CSV File generate sucessfully!! Done !! Thank You!!")
                 print()
                 counter = 10
                 break
             else:
                 print()
-                print("Thank You !!!")
+                print("CSV File not generate. Thank You !!!")
                 counter = 10
                 break
